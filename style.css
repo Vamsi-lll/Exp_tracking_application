@@ -37,6 +37,12 @@ body{
     color: white !important;
 }
 
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
 .task-in{
     background-color: #161D37;
     border: none;
@@ -71,7 +77,35 @@ body{
     height: 65%;
     width: 100%;
     background-color:  #161D37;
-    
+    padding: 10px;
     margin-top: 20px;
     border-radius: 10px;
+    box-sizing: border-box;
+    overflow: auto;
+    scrollbar-width: none;
+}
+tr td{
+    padding:2px 5px;
+    box-sizing: border-box;
+}
+tr:hover{
+    background:linear-gradient(120deg,#21B1FD,#9936FB);
+    border-radius: 10px;
+}
+.render_in{
+    background-color: transparent;
+    border: none;
+    border-bottom:1px solid #070B14 ;
+    color: white;
+    width: 40px;
+}
+.del_btn{
+    background-color: red;
+    color: white;
+    border-radius: 5px ;
+    border:  none;
+}
+
+#task-table{
+    width: 100%;
 }
