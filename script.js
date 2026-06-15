@@ -13,9 +13,14 @@ function create_task(){
     }
     else{
         let new_table_row = document.createElement('tr')
-    
+        if(task_inp.value.length>=20){
+            display_task = task_inp.value.slice(0, 19)+'....'
+        }
+        else{
+            display_task = task_inp.value
+        }
         new_table_row.innerHTML=`
-        <td>${task_inp.value}</td>
+        <td>${display_task}</td>
         <td><input type="number" class="render_in"/></td>
         <td><button class="del_btn">🗑</button></td>
         `
